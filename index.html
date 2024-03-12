@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Google Font Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
-
+    <!-- SlickNav Links -->
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+        });
+    </script>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="shortcut icon" href="images/forest-icon-png-29.png" type="image/x-icon">
     <title>FORESTGEAR</title>
@@ -19,6 +27,7 @@
         <section class="hero">
             <header>
                 <img class="logoimage" src="images/logo.png" alt="Homepage" title="Homepage">
+                <nav id="mobilemenu"></nav>
                 <nav id="nav_menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -29,14 +38,12 @@
                     </ul>
                 </nav>    
             </header>
-            
             <div class="title-text">
                 <p>Get all the &nbsp;&nbsp; <span class="allcaps">Forest<span class="thin-text">Gear</span></span> you need here at</p>
                 <h1 class="allcaps">Forest<wbr><span class="thin-text">Gear</span></h1>
                 <p>You won't regret it</p>
             </div>
         </section>
-
             <div class="sales-points">
                 <div class="sales-point">
                     <h3>Reliability</h3>
@@ -59,22 +66,18 @@
                     <p>Nostrum minus nobis maxime omnis harum odio, repellat, corporis nesciunt vel cum praesentium quae animi.</p>
                 </div>
             </div>
-
             <div class="cta">
                 <div class="cta-contents">
                     <p>Click here to join our mailing list</p>
                     <a href="#" class="btn">Join</a>
                 </div>
             </div>
-
         <!-- Return to Top Button -->
         <div><button onclick="topFunction()" id="cornerbtn" class="return-to-top" title="Go to top"><img src="images/back-to-top-icon-png-7.jpg" alt=""></button></div>
-
         <!-- JavaScript - Return to Top -->
         <script>
             // When the user scrolls down 800px from the top of the document, show the button
              window.onscroll = function() {scrollFunction()};
-         
              function scrollFunction() {
                if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
                  document.getElementById("cornerbtn").style.display = "block";
@@ -82,27 +85,22 @@
                  document.getElementById("cornerbtn").style.display = "none";
                }
              }
-         
              // When the user clicks on the button, scroll to the top of the document
              function topFunction() {
                document.body.scrollTop = 0;
                document.documentElement.scrollTop = 0;
              }
          </script>
-
         <footer>
             <p>&copy; <span id="copyright"></span> Michael Roberts Productions</p>
         </footer>
-
     </main>
 </body>
 </html>
-
-
 <!-- Javascript - Get Current Year for the Footer -->
 <script>
     window.onload = function() {
         var d = new Date();
         document.getElementById("copyright").innerHTML = d.getFullYear();
     }
-</script>    
+</script>
